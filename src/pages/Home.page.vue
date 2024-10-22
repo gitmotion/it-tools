@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Heart } from '@vicons/tabler';
+import { DragDrop, Heart } from '@vicons/tabler';
 import { useHead } from '@vueuse/head';
 import { computed } from 'vue';
 import Draggable from 'vuedraggable';
@@ -7,7 +7,6 @@ import ColoredCard from '../components/ColoredCard.vue';
 import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 import { config } from '@/config';
-import { DragDrop } from '@vicons/tabler';
 
 const toolStore = useToolStore();
 

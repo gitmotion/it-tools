@@ -1,3 +1,18 @@
+Since PRs are a bit backed up on https://github.com/CorentinTh/it-tools you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated:
+
+**docker image:**
+```
+ghcr.io/gitmotion/it-tools:latest
+```
+- you may need to clear cache and hard reload to get new features loading
+
+#### OR locally
+**from github repo (copy & paste oneliner):**
+```
+git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-tools/ && pnpm i && pnpm dev
+``` 
+- (installing packages for the first time may take some time but wait till it finishes)
+##
 <picture>
     <source srcset="./.github/logo-dark.png" media="(prefers-color-scheme: light)">
     <source srcset="./.github/logo-white.png" media="(prefers-color-scheme: dark)">

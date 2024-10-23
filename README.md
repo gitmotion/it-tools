@@ -1,5 +1,5 @@
 Since PRs are a bit backed up on https://github.com/CorentinTh/it-tools you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated:
-##added features##
+#### added features
 - reorder favorites with drag and drop: (https://github.com/CorentinTh/it-tools/pull/1360)
 - AI prompt splitter: (https://github.com/CorentinTh/it-tools/pull/1357)
 - multi-link downloader: (https://github.com/CorentinTh/it-tools/pull/1354)

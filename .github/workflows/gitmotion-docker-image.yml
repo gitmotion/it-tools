@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ secrets.GHCR_USERNAME }}/your-repo-name:latest
+          tags: ghcr.io/${{ secrets.GHCR_USERNAME }}/it-tools:latest
           # Optionally add version tags or specific branch tags like:
           # tags: |
           #   ghcr.io/${{ secrets.GHCR_USERNAME }}/your-repo-name:latest

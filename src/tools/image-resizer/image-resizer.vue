@@ -5,8 +5,10 @@ import { ref, watch } from 'vue';
 const imageFile = ref<File | null>(null);
 const imageUrl = ref<string | null>(null);
 const originalImageUrl = ref<string | null>(null); // To store original image data
-const imageWidth = ref(100); // Default width
-const imageHeight = ref(100); // Default height
+const imageWidth = ref(500); // Default width
+const imageHeight = ref(350); // Default height
+const originalImageWidth = ref<number | null>(null); // Store original image width
+const originalImageHeight = ref<number | null>(null); // Store original image height
 const resizedImageUrl = ref<string | null>(null);
 
 // Watch width to trigger resizing
@@ -31,10 +33,19 @@ function handleFileUpload(event: Event) {
       originalImageUrl.value = imageUrl.value; // Store original image for resizing
       resizedImageUrl.value = null; // Clear previous resized image
 
-      // Automatically resize if width and height are set
-      if (imageWidth.value > 0 && imageHeight.value > 0) {
-        resizeImage();
-      }
+      // Create an image to get original dimensions
+      const img = new Image();
+      img.src = imageUrl.value;
+      img.onload = () => {
+        // Set original image dimensions
+        originalImageWidth.value = img.naturalWidth;
+        originalImageHeight.value = img.naturalHeight;
+
+        // Automatically resize if width and height are set
+        if (imageWidth.value > 0 && imageHeight.value > 0) {
+          resizeImage();
+        }
+      };
     };
     reader.readAsDataURL(file);
   }
@@ -79,7 +90,12 @@ function downloadImage(format: string) {
   <n-card>
     <div>
       <!-- File input -->
-      <input type="file" style="margin-bottom: 20px;" accept=".jpg,.jpeg,.png,.bmp,.ico,.svg" @change="handleFileUpload">
+      <input type="file" mb-2 accept=".jpg,.jpeg,.png,.bmp,.ico,.svg" @change="handleFileUpload">
+
+      <!-- Original image dimensions -->
+      <div v-if="originalImageWidth && originalImageHeight">
+        <p>Original Image Dimensions: {{ originalImageWidth }}x{{ originalImageHeight }}px</p>
+      </div>
 
       <!-- Width and height inputs -->
       <div class="input-group">

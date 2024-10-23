@@ -3,6 +3,7 @@ import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
 import { tool as jsonStringConverter } from './json-string-converter';
 import { tool as aiPromptSplitter } from './ai-prompt-splitter';
+import { tool as imageResizer } from './image-resizer';
 import { tool as emailNormalizer } from './email-normalizer';
 
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
@@ -144,7 +145,13 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Images and videos',
-    components: [qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
+    components: [
+      qrCodeGenerator,
+      wifiQrCodeGenerator,
+      svgPlaceholderGenerator,
+      cameraRecorder,
+      imageResizer,
+    ],
   },
   {
     name: 'Development',

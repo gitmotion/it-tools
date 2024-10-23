@@ -399,3 +399,7 @@ tools:
   ai-prompt-splitter:
     title: AI prompt splitter
     description: Split up large prompts into smaller, manageable segments based on a set character limit for AI chat prompts.
+
+  image-resizer:
+    title: Image resizer
+    description: Convert the width and height of an image file, preview, and download it in a desired format (.jpg, .jpeg, .png, .bmp, .ico, .svg)

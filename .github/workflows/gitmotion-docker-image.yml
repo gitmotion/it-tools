@@ -68,4 +68,3 @@ jobs:
           push: true
           tags: |
             ghcr.io/gitmotion/it-tools:latest
-            # gitmotion/it-tools:latest

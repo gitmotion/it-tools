@@ -153,13 +153,6 @@ export const toolsByCategory: ToolCategory[] = [
       cameraRecorder,
       imageResizer,
     ],
-    components: [
-      qrCodeGenerator,
-      wifiQrCodeGenerator,
-      svgPlaceholderGenerator,
-      cameraRecorder,
-      imageResizer,
-    ],
   },
   {
     name: 'Development',
@@ -202,7 +195,6 @@ export const toolsByCategory: ToolCategory[] = [
       textDiff,
       numeronymGenerator,
       asciiTextDrawer,
-      aiPromptSplitter,
       aiPromptSplitter,
     ],
   },

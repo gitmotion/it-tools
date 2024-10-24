@@ -76,7 +76,7 @@ function onUpdateFavoriteTools() {
         <div v-if="toolStore.favoriteTools.length > 0">
           <h3 class="mb-5px mt-25px font-500 text-neutral-400">
             {{ $t('home.categories.favoriteTools') }}
-            <c-tooltip tooltip="Reorder your favorites section with drag and drop">
+            <c-tooltip tooltip="Drag and drop to reorder favorites">
               <n-icon :component="DragDrop" size="18" />
             </c-tooltip>
           </h3>

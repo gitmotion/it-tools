@@ -5,6 +5,7 @@ Since PRs are a bit backed up on https://github.com/CorentinTh/it-tools you can 
 - multi-link downloader: (https://github.com/CorentinTh/it-tools/pull/1354)
 - image resizer: (https://github.com/CorentinTh/it-tools/pull/1361)
 - JSON String converter: (https://github.com/CorentinTh/it-tools/pull/1351)
+- Updates/Bug fixes: https://github.com/CorentinTh/it-tools/pull/1355, https://github.com/CorentinTh/it-tools/issues/1342 
 **docker image:**
 ```
 ghcr.io/gitmotion/it-tools:latest

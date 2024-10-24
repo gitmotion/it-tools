@@ -238,8 +238,8 @@ function handleCharacterLimitInput(event: KeyboardEvent) {
       raw-text
     />
 
-    <!-- Copy Instructions and Full Prompt buttons -->
-    <div mt-3 style="display: flex; justify-content: space-between;">
+    <!-- Copy Instructions, Full Prompt, and Final Command buttons -->
+    <div class="copy-commands-buttons">
       <c-button @click="copyInstructions">
         Copy Instructions
       </c-button>
@@ -270,5 +270,13 @@ function handleCharacterLimitInput(event: KeyboardEvent) {
 .button-clicked {
   background-color: #229C60;
   color: #000;
+}
+
+.copy-commands-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
 }
 </style>

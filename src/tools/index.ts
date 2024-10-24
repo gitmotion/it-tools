@@ -203,6 +203,7 @@ export const toolsByCategory: ToolCategory[] = [
       numeronymGenerator,
       asciiTextDrawer,
       aiPromptSplitter,
+      aiPromptSplitter,
     ],
   },
   {

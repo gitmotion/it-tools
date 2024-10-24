@@ -22,20 +22,31 @@ watch(imageHeight, () => {
 });
 
 // Handle file upload
-function handleFileUpload(event: Event) {
-  const fileInput = event.target as HTMLInputElement;
-  const file = fileInput.files?.[0];
-  if (file) {
-    imageFile.value = file;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      imageUrl.value = e.target?.result as string; // Preview image
-      originalImageUrl.value = imageUrl.value; // Store original image for resizing
-      resizedImageUrl.value = null; // Clear previous resized image
+async function handleFileUpload(uploadedFile: File) {
+  if (!uploadedFile) {
+    return;
+  }
 
-      // Create an image to get original dimensions
-      const img = new Image();
-      img.src = imageUrl.value;
+  imageFile.value = uploadedFile;
+
+  try {
+    // Read the file as a Data URL
+    const reader = new FileReader();
+    const fileDataUrl = await new Promise<string>((resolve, reject) => {
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = error => reject(error);
+      reader.readAsDataURL(uploadedFile);
+    });
+
+    imageUrl.value = fileDataUrl; // Preview image
+    originalImageUrl.value = fileDataUrl; // Store original image for resizing
+    resizedImageUrl.value = null; // Clear previous resized image
+
+    // Create an image to get original dimensions
+    const img = new Image();
+    img.src = fileDataUrl;
+
+    await new Promise<void>((resolve) => {
       img.onload = () => {
         // Set original image dimensions
         originalImageWidth.value = img.naturalWidth;
@@ -45,9 +56,13 @@ function handleFileUpload(event: Event) {
         if (imageWidth.value > 0 && imageHeight.value > 0) {
           resizeImage();
         }
+
+        resolve();
       };
-    };
-    reader.readAsDataURL(file);
+    });
+  }
+  catch (error) {
+    console.error('Error reading file:', error);
   }
 }
 
@@ -90,7 +105,7 @@ function downloadImage(format: string) {
   <n-card>
     <div>
       <!-- File input -->
-      <input type="file" mb-2 accept=".jpg,.jpeg,.png,.bmp,.ico,.svg" @change="handleFileUpload">
+      <c-file-upload mb-2 accept=".jpg,.jpeg,.png,.bmp,.ico,.svg" title="Drag and drop a .jpg, .jpeg, .png, .bmp, .ico, .svg file here" @file-upload="handleFileUpload" />
 
       <!-- Original image dimensions -->
       <div v-if="originalImageWidth && originalImageHeight">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Heart } from '@vicons/tabler';
+import { DragDrop, Heart } from '@vicons/tabler';
 import { useHead } from '@vueuse/head';
 import { computed } from 'vue';
 import Draggable from 'vuedraggable';

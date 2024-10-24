@@ -7,6 +7,7 @@ import ColoredCard from '../components/ColoredCard.vue';
 import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 import { config } from '@/config';
+import { DragDrop } from '@vicons/tabler';
 
 const toolStore = useToolStore();
 
@@ -75,6 +76,9 @@ function onUpdateFavoriteTools() {
         <div v-if="toolStore.favoriteTools.length > 0">
           <h3 class="mb-5px mt-25px font-500 text-neutral-400">
             {{ $t('home.categories.favoriteTools') }}
+            <c-tooltip tooltip="Reorder your favorites section with drag and drop">
+              <n-icon :component="DragDrop" size="18" />
+            </c-tooltip>
           </h3>
           <Draggable
             :list="favoriteTools"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DragDrop, Heart } from '@vicons/tabler';
+import { IconDragDrop, IconHeart } from '@tabler/icons-vue';
 import { useHead } from '@vueuse/head';
 import { computed } from 'vue';
 import Draggable from 'vuedraggable';
@@ -25,7 +25,7 @@ function onUpdateFavoriteTools() {
   <div class="pt-50px">
     <div class="grid-wrapper">
       <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
-        <ColoredCard v-if="config.showBanner" :title="$t('home.follow.title')" :icon="Heart">
+        <ColoredCard v-if="config.showBanner" :title="$t('home.follow.title')" :icon="IconHeart">
           {{ $t('home.follow.p1') }}
           <a
             href="https://github.com/CorentinTh/it-tools"
@@ -35,13 +35,13 @@ function onUpdateFavoriteTools() {
           >GitHub</a>
           {{ $t('home.follow.p2') }}
           <a
-            href="https://twitter.com/ittoolsdottech"
+            href="https://x.com/ittoolsdottech"
             rel="noopener"
             target="_blank"
-            :aria-label="$t('home.follow.twitterAccount')"
-          >Twitter</a>.
+            :aria-label="$t('home.follow.twitterXAccount')"
+          >X</a>.
           {{ $t('home.follow.thankYou') }}
-          <n-icon :component="Heart" />
+          <n-icon :component="IconHeart" />
         </ColoredCard>
 
         <a href="https://bit.ly/3zBl7DG" target="_blank" rel="noopener" class="text-current decoration-none">
@@ -76,7 +76,7 @@ function onUpdateFavoriteTools() {
           <h3 class="mb-5px mt-25px font-500 text-neutral-400">
             {{ $t('home.categories.favoriteTools') }}
             <c-tooltip :tooltip="$t('home.categories.favoritesDndToolTip')">
-              <n-icon :component="DragDrop" size="18" />
+              <n-icon :component="IconDragDrop" size="18" />
             </c-tooltip>
           </h3>
           <Draggable

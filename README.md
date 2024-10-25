@@ -1,3 +1,5 @@
+![Alt](https://repobeats.axiom.co/api/embed/c5fb872b58d75b099aff112d9c4c7fc1eabf8a9b.svg "Repobeats analytics image")
+
 Since PRs are a bit backed up on https://github.com/CorentinTh/it-tools you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated:
 #### added features
 - reorder favorites with drag and drop: (https://github.com/CorentinTh/it-tools/pull/1360)
@@ -19,6 +21,7 @@ git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-t
 ``` 
 - (installing packages for the first time may take some time but wait till it finishes)
 ##
+
 <picture>
     <source srcset="./.github/logo-dark.png" media="(prefers-color-scheme: light)">
     <source srcset="./.github/logo-white.png" media="(prefers-color-scheme: dark)">
@@ -26,6 +29,8 @@ git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-t
 </picture>
 
 Useful tools for developer and people working in IT. [Have a look !](https://it-tools.tech).
+
+<details>
 
 ## Sponsors
 
@@ -154,3 +159,4 @@ Contributor graph is generated using [contrib.rocks](https://contrib.rocks/previ
 ## License
 
 This project is under the [GNU GPLv3](LICENSE).
+</details>

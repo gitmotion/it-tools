@@ -129,8 +129,22 @@ function onUpdateFavoriteTools() {
 }
 
 .ghost-favorites-draggable {
-  opacity: 0.5;
+  opacity: 0.4;
   background-color: #ccc;
   border: 2px dashed #666;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  animation: ghost-favorites-draggable-animation 0.2s ease-out;
+}
+
+@keyframes ghost-favorites-draggable-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1.0);
+  }
 }
 </style>

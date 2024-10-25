@@ -75,13 +75,14 @@ function onUpdateFavoriteTools() {
         <div v-if="toolStore.favoriteTools.length > 0">
           <h3 class="mb-5px mt-25px font-500 text-neutral-400">
             {{ $t('home.categories.favoriteTools') }}
-            <c-tooltip tooltip="Drag and drop to reorder favorites">
+            <c-tooltip :tooltip="$t('home.categories.favoritesDndToolTip')">
               <n-icon :component="DragDrop" size="18" />
             </c-tooltip>
           </h3>
           <Draggable
             :list="favoriteTools"
             class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4"
+            ghost-class="ghost-favorites-draggable"
             item-key="name"
             @end="onUpdateFavoriteTools"
           >
@@ -125,5 +126,11 @@ function onUpdateFavoriteTools() {
   overflow: hidden;
   opacity: 0;
   margin-bottom: 0;
+}
+
+.ghost-favorites-draggable {
+  opacity: 0.5;
+  background-color: #ccc;
+  border: 2px dashed #666;
 }
 </style>

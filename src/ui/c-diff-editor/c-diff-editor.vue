@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import * as monaco from 'monaco-editor';
+import { editor as monacoEditor } from 'monaco-editor';
 import { useStyleStore } from '@/stores/style.store';
 
-const props = withDefaults(defineProps<{ options?: monaco.editor.IDiffEditorOptions }>(), { options: () => ({}) });
+const props = withDefaults(defineProps<{ options?: monacoEditor.IDiffEditorOptions }>(), { options: () => ({}) });
 const { options } = toRefs(props);
 
 const editorContainer = ref<HTMLElement | null>(null);
-let editor: monaco.editor.IStandaloneDiffEditor | null = null;
+let editor: monacoEditor.IStandaloneDiffEditor | null = null;
 
-monaco.editor.defineTheme('it-tools-dark', {
+monacoEditor.defineTheme('it-tools-dark', {
   base: 'vs-dark',
   inherit: true,
   rules: [],
@@ -17,7 +17,7 @@ monaco.editor.defineTheme('it-tools-dark', {
   },
 });
 
-monaco.editor.defineTheme('it-tools-light', {
+monacoEditor.defineTheme('it-tools-light', {
   base: 'vs',
   inherit: true,
   rules: [],
@@ -30,7 +30,7 @@ const styleStore = useStyleStore();
 
 watch(
   () => styleStore.isDarkTheme,
-  isDarkTheme => monaco.editor.setTheme(isDarkTheme ? 'it-tools-dark' : 'it-tools-light'),
+  isDarkTheme => monacoEditor.setTheme(isDarkTheme ? 'it-tools-dark' : 'it-tools-light'),
   { immediate: true },
 );
 
@@ -49,7 +49,7 @@ onMounted(() => {
     return;
   }
 
-  editor = monaco.editor.createDiffEditor(editorContainer.value, {
+  editor = monacoEditor.createDiffEditor(editorContainer.value, {
     originalEditable: true,
     minimap: {
       enabled: false,
@@ -57,8 +57,8 @@ onMounted(() => {
   });
 
   editor.setModel({
-    original: monaco.editor.createModel('original text', 'txt'),
-    modified: monaco.editor.createModel('modified text', 'txt'),
+    original: monacoEditor.createModel('original text', 'txt'),
+    modified: monacoEditor.createModel('modified text', 'txt'),
   });
 });
 </script>

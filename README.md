@@ -21,23 +21,13 @@ Since PRs are a bit backed up on <https://github.com/CorentinTh/it-tools> you ca
 
 </details>
 
-## docker image
+## Installation methods
 
-```
-ghcr.io/gitmotion/it-tools:latest
-```
-
-- you may need to clear cache and hard reload to get new features loading
-
-## OR locally
-
-**from github repo (copy & paste oneliner):**
-
-```
-git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-tools/ && pnpm i && pnpm dev
-```
-
-- (installing packages for the first time may take some time but wait till it finishes)
+| Docker Image                            | Local Installation                                                                                                          |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| `ghcr.io/gitmotion/it-tools:latest`     | `git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-tools/ && pnpm i && pnpm dev`              |
+| replace your current image with this image | copy & paste oneliner (from github repo) |
+| You may need to clear cache and hard reload to get new features loading | Installing packages for the first time may take some time; please wait until it finishes |
 
 ##
 

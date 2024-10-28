@@ -1,25 +1,44 @@
 ![Alt](https://repobeats.axiom.co/api/embed/c5fb872b58d75b099aff112d9c4c7fc1eabf8a9b.svg "Repobeats analytics image")
 
-Since PRs are a bit backed up on https://github.com/CorentinTh/it-tools you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated:
-#### added features
-- reorder favorites with drag and drop: (https://github.com/CorentinTh/it-tools/pull/1360)
-- AI prompt splitter: (https://github.com/CorentinTh/it-tools/pull/1357)
-- multi-link downloader: (https://github.com/CorentinTh/it-tools/pull/1354)
-- image resizer: (https://github.com/CorentinTh/it-tools/pull/1361)
-- JSON String converter: (https://github.com/CorentinTh/it-tools/pull/1351)
-- Updates/Bug fixes: https://github.com/CorentinTh/it-tools/pull/1355, https://github.com/CorentinTh/it-tools/issues/1342 
-**docker image:**
+Since PRs are a bit backed up on <https://github.com/CorentinTh/it-tools> you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated.
+
+- github action triggers on every push to this branch - [view package here](https://github.com/gitmotion/it-tools/pkgs/container/it-tools)
+
+## Added features
+
+<details>
+  <summary>Pull requests added</summary>
+
+| Feature                         | PR Links                                                                                                              |
+|---------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| Reorder favorites with drag and drop | [#1360](https://github.com/CorentinTh/it-tools/pull/1360), [#1375](https://github.com/CorentinTh/it-tools/pull/1375) |
+| AI prompt splitter              | [#1357](https://github.com/CorentinTh/it-tools/pull/1357)                                                         |
+| Multi-link downloader           | [#1354](https://github.com/CorentinTh/it-tools/pull/1354)                                                         |
+| Image resizer                   | [#1361](https://github.com/CorentinTh/it-tools/pull/1361)                                                         |
+| JSON String converter           | [#1351](https://github.com/CorentinTh/it-tools/pull/1351)                                                         |
+| Updates/Bug fixes               | [#1355](https://github.com/CorentinTh/it-tools/pull/1355), [#1342](https://github.com/CorentinTh/it-tools/issues/1342) |
+| Emoji picker performance updates | [#1374](https://github.com/CorentinTh/it-tools/pull/1374)                                                         |
+
+</details>
+
+## docker image
+
 ```
 ghcr.io/gitmotion/it-tools:latest
 ```
+
 - you may need to clear cache and hard reload to get new features loading
 
-#### OR locally
+## OR locally
+
 **from github repo (copy & paste oneliner):**
+
 ```
 git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-tools/ && pnpm i && pnpm dev
-``` 
+```
+
 - (installing packages for the first time may take some time but wait till it finishes)
+
 ##
 
 <picture>

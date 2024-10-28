@@ -1,4 +1,4 @@
-import { Messages } from '@vicons/tabler';
+import { IconMessages } from '@tabler/icons-vue';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
@@ -7,6 +7,6 @@ export const tool = defineTool({
   description: '',
   keywords: ['ai', 'prompt', 'splitter'],
   component: () => import('./ai-prompt-splitter.vue'),
-  icon: Messages,
+  icon: IconMessages,
   createdAt: new Date('2024-10-18'),
 });

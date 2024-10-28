@@ -407,4 +407,4 @@ tools:
 
   multi-link-downloader:
     title: Multi link downloader
-    description: Asynchronously downloads from multiple links into a zip file while a single link downloads directly.
+    description: Asynchronously downloads from multiple links into a zip file while a single link downloads directly. (Requires an internet connection)

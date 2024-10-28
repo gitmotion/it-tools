@@ -1,4 +1,4 @@
-import { FileDownload } from '@vicons/tabler';
+import { IconFileDownload } from '@tabler/icons-vue';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
@@ -7,6 +7,6 @@ export const tool = defineTool({
   description: '',
   keywords: ['multi', 'link', 'downloader'],
   component: () => import('./multi-link-downloader.vue'),
-  icon: FileDownload,
+  icon: IconFileDownload,
   createdAt: new Date('2024-10-18'),
 });

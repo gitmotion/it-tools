@@ -1,6 +1,6 @@
-![Alt](https://repobeats.axiom.co/api/embed/c5fb872b58d75b099aff112d9c4c7fc1eabf8a9b.svg "Repobeats analytics image")
+### Check out these change here: <https://it-tools-eight-gamma.vercel.app/>
 
-Since PRs are a bit backed up on <https://github.com/CorentinTh/it-tools> you can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated.
+You can use my image in your docker-compose file if you want this functionality along with my other additions until the main branch has been updated.
 
 - github action triggers on every push to this branch - [view package here](https://github.com/gitmotion/it-tools/pkgs/container/it-tools)
 
@@ -28,6 +28,10 @@ Since PRs are a bit backed up on <https://github.com/CorentinTh/it-tools> you ca
 | <span title="triple click me!">`ghcr.io/gitmotion/it-tools:latest`</span> | <span title="triple click me!">`git clone -b gitmotion/main https://github.com/gitmotion/it-tools.git && cd it-tools/ && pnpm i && pnpm dev`</span> |
 | replace your current image with this image | copy & paste oneliner (from github repo) |
 | You may need to clear cache and hard reload to get new features loading | Installing packages for the first time may take some time; please wait until it finishes |
+
+##
+
+![Alt](https://repobeats.axiom.co/api/embed/c5fb872b58d75b099aff112d9c4c7fc1eabf8a9b.svg "Repobeats analytics image")
 
 ##
 

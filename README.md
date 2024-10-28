@@ -11,13 +11,13 @@ You can use my image in your docker-compose file if you want this functionality 
 
 | Feature                         | PR Links                                                                                                              |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| Reorder favorites with drag and drop | [#1360](https://github.com/CorentinTh/it-tools/pull/1360), [#1375](https://github.com/CorentinTh/it-tools/pull/1375) |
-| AI prompt splitter              | [#1357](https://github.com/CorentinTh/it-tools/pull/1357)                                                         |
-| Multi-link downloader           | [#1354](https://github.com/CorentinTh/it-tools/pull/1354)                                                         |
-| Image resizer                   | [#1361](https://github.com/CorentinTh/it-tools/pull/1361)                                                         |
-| JSON String converter           | [#1351](https://github.com/CorentinTh/it-tools/pull/1351)                                                         |
+| [Reorder favorites with drag and drop](https://gitmotion-it-tools-beta.vercel.app/) | [#1360](https://github.com/CorentinTh/it-tools/pull/1360), [#1375](https://github.com/CorentinTh/it-tools/pull/1375) |
+| [AI prompt splitter](https://gitmotion-it-tools-beta.vercel.app/ai-prompt-splitter)              | [#1357](https://github.com/CorentinTh/it-tools/pull/1357)                                                         |
+| [Multi-link downloader](https://gitmotion-it-tools-beta.vercel.app/multi-link-downloader)           | [#1354](https://github.com/CorentinTh/it-tools/pull/1354)                                                         |
+| [Image resizer](https://gitmotion-it-tools-beta.vercel.app/image-resizer)                   | [#1361](https://github.com/CorentinTh/it-tools/pull/1361)                                                         |
+| [JSON String converter](https://gitmotion-it-tools-beta.vercel.app/json-string-converter)           | [#1351](https://github.com/CorentinTh/it-tools/pull/1351)                                                         |
+| [Emoji picker performance updates](https://gitmotion-it-tools-beta.vercel.app/emoji-picker) | [#1374](https://github.com/CorentinTh/it-tools/pull/1374)                                                         |
 | Updates/Bug fixes               | [#1355](https://github.com/CorentinTh/it-tools/pull/1355), [#1342](https://github.com/CorentinTh/it-tools/issues/1342) |
-| Emoji picker performance updates | [#1374](https://github.com/CorentinTh/it-tools/pull/1374)                                                         |
 
 </details>
 

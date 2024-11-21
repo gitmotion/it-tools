@@ -9,5 +9,5 @@ export const tool = defineTool({
   keywords: ['emoji', 'picker', 'unicode', 'copy', 'paste'],
   component: () => import('./emoji-picker.vue'),
   icon: MoodSmile,
-  createdAt: new Date('2023-08-07'),
+  createdAt: new Date(),
 });

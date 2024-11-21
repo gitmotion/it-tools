@@ -8,5 +8,5 @@ export const tool = defineTool({
   keywords: ['json', 'string', 'converter'],
   component: () => import('./json-string-converter.vue'),
   icon: Braces,
-  createdAt: new Date('2024-10-17'),
+  createdAt: new Date(),
 });
